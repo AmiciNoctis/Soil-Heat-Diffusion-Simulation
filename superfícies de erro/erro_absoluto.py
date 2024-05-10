@@ -45,13 +45,18 @@ for i, z in enumerate(z_values):
     for j, t in enumerate(t_values):
         erro_absoluto_values[i, j] = temperatura_u(t, z)
 
+#Salvando os dados em um arquivo .csv
+data_array = np.column_stack((t_values, erro_absoluto_values, z_values))
+np.savetxt('dados_de_erro.csv', data_array, delimiter=',', header='Tempo, Profundidade, Temperatura', comments='s')
+
+
 # Plotando a superfície tridimensional do módulo do erro absoluto
 T, Z = np.meshgrid(t_values, z_values)
 fig = plt.figure(figsize=(10, 6))
 ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(T, Z, erro_absoluto_values, cmap='viridis') # type: ignore
+ax.plot_surface(T, erro_absoluto_values, Z, cmap='viridis') # type: ignore
 ax.set_xlabel('Tempo (dias)')
-ax.set_ylabel('Profundidade (metros)')
-ax.set_zlabel('Erro Absoluto') # type: ignore
+ax.set_ylabel('Erro Absoluto')
+ax.set_zlabel('Profundidade (metros)') # type: ignore
 ax.set_title('Superfície de Erro Absoluto da Temperatura no Solo')
 plt.show()

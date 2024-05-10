@@ -46,7 +46,7 @@ for i, z in enumerate(z_values):
 
 #Salvando os dados em um arquivo .csv
 data_array = np.column_stack((t_values, temperatura_values, z_values))
-np.savetxt('dados_temperatura.csv', data_array, delimiter=',', header='Tempo (dias), Profundidade (metros), Temperatura (°C)', comments='s')
+np.savetxt('dados_temperatura.csv', data_array, delimiter=',', header='Tempo, Temperatura, Profundidade', comments='s')
 
 # Plotando a superfície tridimensional
 T, Z = np.meshgrid(t_values, z_values)

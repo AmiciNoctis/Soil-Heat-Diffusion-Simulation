@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad, dblquad
 
 # Definindo os parâmetros
-k = 0.057
-T = 365  # Período em dias
-omega = 2 * np.pi / T
-theta0 = 6.28
-u0 = 18.7
+k = 0.057 # Constante de difusividade do solo
+T = 365 # Tempo em dias
+omega = 2 * np.pi / T # Periodo
+theta0 = 6.28 # Amplitude
+u0 = 18.7 # Média da temperatura do solo
 
 # Definindo a função a ser integrada
 def v1_zt(y, tau, t, z):

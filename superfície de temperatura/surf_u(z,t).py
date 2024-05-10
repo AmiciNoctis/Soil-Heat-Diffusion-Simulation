@@ -3,12 +3,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from scipy.integrate import quad, dblquad
 
-# Definindo os parâmetros
-k = 0.057
-T = 365  # Período em diassolucao
-omega = 2 * np.pi / T
-theta0 = 6.28
-u0 = 18.7
+k = 0.057 # Constante de difusividade do solo
+T = 365 # Tempo em dias
+omega = 2 * np.pi / T # Periodo
+theta0 = 6.28 # Amplitude
+u0 = 18.7 # Média da temperatura do solo
 
 # Definindo a função a ser integrada
 def v1_zt(y, tau, t, z):
@@ -46,7 +45,7 @@ for i, z in enumerate(z_values):
 
 #Salvando os dados em um arquivo .csv
 data_array = np.column_stack((t_values, temperatura_values, z_values))
-np.savetxt('dados_temperatura.csv', data_array, delimiter=',', header='Tempo, Temperatura, Profundidade', comments='s')
+np.savetxt('dados_temperatura.csv', data_array, delimiter=',', header='Tempo, Temperatura, Profundidade', comments='')
 
 # Plotando a superfície tridimensional
 T, Z = np.meshgrid(t_values, z_values)

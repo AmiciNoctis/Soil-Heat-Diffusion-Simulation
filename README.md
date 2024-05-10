@@ -20,7 +20,7 @@
 
 - `README.md`: Este arquivo que você está lendo, fornecendo uma visão geral do repositório.
 
-- `Os parâmetros utilizados são`:
+## Os parâmetros utilizados são:
 
 `Constante de difusividade do solo`: k = 0.057mm/s²,
 - `Tempo`: T = 365 dias,

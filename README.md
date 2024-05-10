@@ -23,7 +23,7 @@
 - `Os parâmetros utilizados são`:
 
 `Constante de difusividade do solo`: k = 0.057mm/s²,
-`Tempo`: T = 365 dias,
-`Período`: omega = 2 * pi / T,
-`Amplitude`: theta0 = 6.28,
-`Média da temperatura do solo`: u0 = 18.7°C
+- `Tempo`: T = 365 dias,
+- `Período`: omega = 2 * pi / T,
+- `Amplitude`: theta0 = 6.28,
+- `Média da temperatura do solo`: u0 = 18.7°C

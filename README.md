@@ -19,4 +19,11 @@
 - `solucao_u(z)_Comparada.py`: Este algoritmo compara as soluções de temperatura no solo obtidas através de diferentes abordagens. Além de calcular a temperatura utilizando um método de integração numérica, a solução de Ruth Brum (2013) também é implementada para efeito de comparação. Os resultados são plotados em um gráfico que mostra a variação da temperatura em relação à profundidade do solo, para dois pontos de tempo fixos. Uma linha horizontal é adicionada para representar a temperatura inicial de 18.7°C.
 
 - `README.md`: Este arquivo que você está lendo, fornecendo uma visão geral do repositório.
- 
+
+- `Os parâmetros utilizados são`:
+
+k = 0.057 # Constante de difusividade do solo
+T = 365 # Tempo em dias
+omega = 2 * np.pi / T # Periodo
+theta0 = 6.28 # Amplitude
+u0 = 18.7 # Média da temperatura do solo
